@@ -11,6 +11,12 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+/* NOTES
+
+Usually only render one component. In this case, <App /> will render some nested components
+
+*/
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

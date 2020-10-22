@@ -1,5 +1,50 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Notes
+
+## Next Gen JS
+React uses next gen JavaScript in some of its syntax, so it is good to have an understanding of some ES6 features. 
+
+### `let` and `const`
+These two keywords replace the `var` keyword. 
+* `let` is used for variables that will change
+* `const` is used for variables that should never change
+
+### Arrow Functions
+These always intimidated me, but they aren't so bad. 
+
+In old JS, you write a functions as `function myFunction() {...}`, but arrow functions simplify this. 
+
+With ES6, you can just write `const > myFunction = () => {...}`. Here, we are assigning a function value to a propery. The parenthesis `()` is the argument list. If there are no arguments, it must be written. If there is *only* one argument, the parenthesis cane be dropped. Similarly, if the function *only* returns a value, then the curly braces and keyword (`{return}`) can be dropped. 
+
+So `const multiply = number => number * 2` takes one parameter (`number`) and returns that value multiplied by two. 
+
+ Note that using arrow functions helps with the `this` keyword issues that would occur in the older syntax. 
+
+### Exporting and Importing Modules
+You can connect files exporting and importing them. This helps with organization. Let's say we have two files in which we are exporting
+```
+// Person.js
+const person = {name:"Ben"};
+
+export default person;
+
+// Utility.js
+export const clean = () => {...};
+
+export const baseDate = 10;
+```
+You can either export as `default`, meaning that you will get that object when you import from that file without specifying anything else. Or, you can export individual objects or functions. Then, when you want to use them
+```
+import Person from './Person.js';    // Note: the name is up to you since by default the whole object is exported.
+import prs from './Person.js';       // The name is how you will refer to it in this file. 
+
+import {clean} from './Utility.js'      // Use {} to specify import
+import {baseData} from './Utility.js'
+```
+
+# Generated React ReadMe
+
 ## Available Scripts
 
 In the project directory, you can run:
