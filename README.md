@@ -259,8 +259,45 @@ In functional components, the `useState()` function **replaces** the state. It d
 
 `useState()` returns an array with two elements. The first is the current state. The second is a function that allows us to update the state. In the above example, deconstructing is used. 
 
-### Event Handling
+#### Stateful and Stateless Components
+Components with `state` are known as stateful, smart, or container components. 
 
+Components without `state` are known as stateless, dumb, or presentational components. It is usually better to have more presentational components because it helps manage data from within your app. 
+
+### Event Handling
+There are [a lot of events](https://reactjs.org/docs/events.html) to use in React. We can attach them to JSX elements by passing them as props:
+```
+<button onClick={this.myHanlder} />
+```
+Note that writing `onClick={myFunction()}` would excecute the function right away, so leave out the `()`.
+
+For methods with arguments, we have use `.bind`. 
+```
+<button onClick={this.myHandler.bind(this, arg)} />
+```
+Tw way binding is when you bind a child component's input to a prop and attach an event to it's parent via props. 
+
+### Styling with Stylesheets or Inline
+CSS that is writen in stylesheets is not scoped to that component. It is global. Remember to import your CSS file to your component JS file.
+
+Writing inline CSS is scoped for that component, but it isn't really CSS. You write a JS object and assign it to a JSX `style` attribute. The object should be defined *inside* the `render()` function.
+```
+render() {
+    const btn = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: 'solid blue thin',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
+    return (
+        <button 
+        style={btn} >Button</button>
+    );
+```
+
+## Lists and Conditionals
 
 }----<=============================================>----{
 
