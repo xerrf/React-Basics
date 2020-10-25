@@ -1,11 +1,11 @@
 # Notes
 
 ## Quick Links
-[create-react-app](https://github.com/facebookincubator/create-react-app)
-[JSX](https://reactjs.org/docs/introducing-jsx.html)
-[Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
-[Components & Props](https://reactjs.org/docs/components-and-props.html)
-[Events](https://reactjs.org/docs/events.html)
+[create-react-app](https://github.com/facebookincubator/create-react-app)\
+[JSX](https://reactjs.org/docs/introducing-jsx.html)\
+[Rendering Elements](https://reactjs.org/docs/rendering-elements.html)\
+[Components & Props](https://reactjs.org/docs/components-and-props.html)\
+[Events](https://reactjs.org/docs/events.html)\
 
 ## Next Gen JS
 React uses next gen JavaScript in some of its syntax, so it is good to have an understanding of some ES6 features. 
